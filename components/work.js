@@ -3,10 +3,10 @@ import { Heading, Box, Image, Link, Badge } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
 export const Title = ({ children }) => (
-  <Box>
-    <Link as={NextLink} href="/works">
-      Works
-    </Link>
+  <Box mt={2}>
+    <NextLink href="/projects" passHref>
+      <Link>Projects</Link>
+    </NextLink>
     <span>
       {' '}
       <ChevronRightIcon />{' '}
@@ -23,6 +23,12 @@ export const WorkImage = ({ src, alt }) => (
 
 export const Meta = ({ children }) => (
   <Badge colorScheme="green" mr={2}>
+    {children}
+  </Badge>
+)
+
+export const Tag = ({ children }) => (
+  <Badge colorScheme="teal" mr={2}>
     {children}
   </Badge>
 )

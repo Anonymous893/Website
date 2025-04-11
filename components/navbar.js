@@ -1,4 +1,3 @@
-import { forwardRef } from 'react'
 import Logo from './logo'
 import NextLink from 'next/link'
 import {
@@ -17,30 +16,25 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import { IoLogoGithub } from 'react-icons/io5'
+import { BsVectorPen } from 'react-icons/bs'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   return (
-    <Link
-      as={NextLink}
-      href={href}
-      scroll={false}
-      p={2}
-      bg={active ? 'grassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
-      target={target}
-      {...props}
-    >
-      {children}
-    </Link>
+    <NextLink href={href} passHref scroll={false}>
+      <Link
+        p={2}
+        bg={active ? 'grassTeal' : undefined}
+        color={active ? '#202023' : inactiveColor}
+        target={target}
+        {...props}
+      >
+        {children}
+      </Link>
+    </NextLink>
   )
 }
-
-const MenuLink = forwardRef((props, ref) => (
-  <Link ref={ref} as={NextLink} {...props} />
-))
 
 const Navbar = props => {
   const { path } = props
@@ -52,7 +46,7 @@ const Navbar = props => {
       w="100%"
       bg={useColorModeValue('#ffffff40', '#20202380')}
       css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={2}
+      zIndex={1}
       {...props}
     >
       <Container
@@ -77,27 +71,21 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
+          <LinkItem href="/projects" path={path}>
+            Projects
           </LinkItem>
-          <LinkItem href="https://store.craftz.dog/" path={path}>
-            Wallpapers
+          <LinkItem href="/skills" path={path}>
+            Skills
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
-          </LinkItem>
-          <LinkItem href="https://uses.craftz.dog/">Uses</LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage"
+          <LinkItem 
+            href="/coursework"
             path={path}
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            Source
+            pl={2}>
+            <BsVectorPen size={23}/>
+            Coursework
           </LinkItem>
         </Stack>
 
@@ -113,27 +101,18 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="/">
-                  About
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/works">
-                  Works
-                </MenuItem>
-                <MenuItem as={MenuLink} href="https://store.craftz.dog/">
-                  Wallpapers
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/posts">
-                  Posts
-                </MenuItem>
-                <MenuItem as={MenuLink} href="https://uses.craftz.dog/">
-                  Uses
-                </MenuItem>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
-                >
-                  View Source
-                </MenuItem>
+                <NextLink href="/" passHref>
+                  <MenuItem as={Link}>About</MenuItem>
+                </NextLink>
+                <NextLink href="/projects" passHref>
+                  <MenuItem as={Link}>Projects</MenuItem>
+                </NextLink>
+                <NextLink href="/files/resume.pdf" passHref>
+                  <MenuItem as={Link}>Resume</MenuItem>
+                </NextLink>
+                <NextLink href="/courses" passHref>
+                  <MenuItem as={Link}>Coursework</MenuItem>
+                </NextLink>
               </MenuList>
             </Menu>
           </Box>
