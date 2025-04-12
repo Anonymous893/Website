@@ -21,11 +21,11 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import thumbChess from '../public/images/projects/chess-ai.png'
 import thumbMarket from '../public/images/projects/mmd.png'
 import Image from 'next/image'
-import VoxelDogLoader from '../components/voxel-dog-loader'
+import VoxelLoader from '../components/voxel-loader'
 
-const LazyVoxelDog = dynamic(() => import('../components/voxel-dog'), {
+const LazyVoxelImg = dynamic(() => import('../components/voxel-img'), {
   ssr: false,
-  loading: () => <VoxelDogLoader />
+  loading: () => <VoxelLoader />
 })
 
 const ProfileImage = chakra(Image, {
@@ -35,7 +35,7 @@ const ProfileImage = chakra(Image, {
 const Home = () => (
   <Layout>
     <Container maxW="container.md">
-      <LazyVoxelDog />
+      <LazyVoxelImg />
       <Box
         borderRadius="lg"
         mb={6}
@@ -44,7 +44,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        UMD CS | ECON | STAT 2024
+        UMD CS | ECON | STAT
       </Box>
 
       <Box display={{ md: 'flex' }}>
