@@ -7,7 +7,7 @@ import {
     Stack
   } from '@chakra-ui/react'
   import Layout from '../../components/layouts/article'
-  import { Title, Meta } from '../../components/work'
+  import { Title, Meta, WorkImage } from '../../components/work'
   import { BsGithub } from 'react-icons/bs'
   import P from '../../components/paragraph'
   
