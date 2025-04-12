@@ -21,6 +21,7 @@ import {
   
 const SkillList = ({ items }) => {
     const iconColor = useColorModeValue('blue.500', 'blue.300')
+    const experienceColor = useColorModeValue('gray.600', 'gray.400')
     
     return (
       <List spacing={3}>
@@ -29,7 +30,7 @@ const SkillList = ({ items }) => {
             <Icon as={FaChevronRight} color={iconColor} mr={2} boxSize={3} />
             <Text fontSize="lg">
               {item.name}
-              <Text as="span" fontSize="sm" color={useColorModeValue('gray.600', 'gray.400')} ml={2}>
+              <Text as="span" fontSize="sm" color={experienceColor} ml={2}>
                 ({item.experience})
               </Text>
             </Text>
@@ -40,8 +41,9 @@ const SkillList = ({ items }) => {
 }
   
 const Skills = () => {
-    const tabSelectedBg = useColorModeValue('blue.50', 'blue.900')
     const tabSelectedBorder = useColorModeValue('blue.200', 'blue.600')
+    const borderColor = useColorModeValue('gray.200', 'gray.700')
+    const selectedColor = useColorModeValue('blue.600', 'blue.300')
   
     return (
       <Layout title="Technical Skills">
@@ -53,12 +55,12 @@ const Skills = () => {
           </Stack>
   
           <Tabs variant="unstyled">
-            <TabList borderBottom="2px" borderColor={useColorModeValue('gray.200', 'gray.700')} gap={4}>
+            <TabList borderBottom="2px" borderColor={borderColor} gap={4}>
               {Object.entries(skills).map(([key, category]) => (
                 <Tab 
                   key={key}
                   _selected={{ 
-                    color: useColorModeValue('blue.600', 'blue.300'),
+                    color: selectedColor,
                     borderBottom: '2px',
                     borderColor: tabSelectedBorder
                   }}

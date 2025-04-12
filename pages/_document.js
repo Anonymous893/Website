@@ -24,7 +24,7 @@ export default class Document extends NextDocument {
               page_path: window.location.pathname,
             });
           `,
-            }}
+            }} async
           />
         </Head>
         <body>

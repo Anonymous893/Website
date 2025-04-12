@@ -38,6 +38,9 @@ const CourseItem = ({ code, name }) => {
 }
 
 const Courses = () => {
+  const highlightedBg = useColorModeValue('blue.500', 'blue.300')
+  const regularBg = useColorModeValue('pink.500', 'purple.500')
+
   return (
     <Layout title="Courses">
       <Container maxW="container.xl">
@@ -56,9 +59,7 @@ const Courses = () => {
                 key={department} 
                 _selected={{
                   color: 'white',
-                  bg: isHighlighted 
-                    ? useColorModeValue('blue.500', 'blue.300')
-                    : useColorModeValue('pink.500', 'purple.500')
+                  bg: isHighlighted ? highlightedBg : regularBg
                 }}
               >
                 {department}
