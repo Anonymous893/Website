@@ -1,4 +1,4 @@
-# Jessicas's Homepage
+# Jessica's Homepage
 
 ## Stack
 
