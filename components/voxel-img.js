@@ -18,9 +18,9 @@ const VoxelPic = () => {
   const [target] = useState(new THREE.Vector3(0, -0.15, 0.3))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      20 * Math.sin(0.5 * Math.PI),
-      10,
-      20 * Math.cos(0.5 * Math.PI)
+      20 * Math.sin(0.2 * Math.PI),
+      5,
+      20 * Math.cos(0.2 * Math.PI)
     )
   )
   const [scene] = useState(new THREE.Scene())
@@ -93,7 +93,7 @@ const VoxelPic = () => {
           const p = initialCameraPosition
           const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
-          camera.position.y = 10
+          camera.position.y = 5
           camera.position.x =
             p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
           camera.position.z =
