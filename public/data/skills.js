@@ -20,6 +20,7 @@ export const skills = {
     icon: DiReact,
     items: [
         { name: 'React', experience: '2.5 years' },
+        { name: 'Next.js', experience: '2.5 years' },
         { name: 'Node.js', experience: '2.5 years' },
         { name: 'Selenium', experience: '2 years' },
         { name: 'TensorFlow', experience: '1 year' },
