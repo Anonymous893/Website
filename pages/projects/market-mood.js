@@ -12,7 +12,7 @@ import {
   import P from '../../components/paragraph'
   
   const Work = () => (
-    <Layout title="market-mood">
+    <Layout title="marketMood">
       <Container maxW="container.xl">
         <Stack direction={['column', 'row']} my={4} spacing='24px' justify="space-between">
           <Title>

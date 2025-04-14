@@ -13,7 +13,7 @@ import {
   import P from '../../components/paragraph'
   
   const Work = () => (
-    <Layout title="chess-ai">
+    <Layout title="chessAi">
       <Container maxW="container.xl">
         <Stack direction={['column', 'row']} my={4} spacing='24px' justify="space-between">
           <Title>
