@@ -11,6 +11,7 @@ import {
   import { Title, WorkImage, Meta } from '../../components/work'
   import { BsGithub } from 'react-icons/bs'
   import P from '../../components/paragraph'
+  import { ExternalLinkIcon } from '@chakra-ui/icons'
   
   const Work = () => (
     <Layout title="chessAi">
