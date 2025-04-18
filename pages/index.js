@@ -126,14 +126,14 @@ const Home = () => (
             title="Chess AI"
             thumbnail={thumbChess}
           >
-            Chess AI
+            Minimax Algorithm-Powered Chess Engine
           </GridItem>
           <GridItem
             href="/projects/market-mood"
             title="Market Mood Detector"
             thumbnail={thumbMarket}
           >
-            Market Mood Detector
+            Sentiment Analysis for Predictions
           </GridItem>
         </SimpleGrid>
 

@@ -11,6 +11,7 @@ import {
   import { Title, WorkImage, Meta } from '../../components/work'
   import { BsGithub } from 'react-icons/bs'
   import P from '../../components/paragraph'
+  import { ExternalLinkIcon } from '@chakra-ui/icons'
   
   const Work = () => (
     <Layout title="chessAi">
@@ -33,6 +34,12 @@ import {
         </P>
 
         <List ml={4} my={4}>
+          <ListItem>
+            <Meta>Website</Meta>
+            <Link href="https://chess-ai-red.vercel.app/">
+              chess-ai-red.vercel.app// <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ListItem>
           <ListItem>
             <Meta>Frontend</Meta>
             <span>React, HTML, CSS</span>
