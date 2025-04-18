@@ -35,7 +35,6 @@ const Projects = () => (
           </WorkGridItem>
           <Center >
             <Tag>Web-Dev</Tag>
-            <Tag>Fullstack</Tag>
             <Tag>Algorithms</Tag>
           </Center>
         </Section>
@@ -45,7 +44,7 @@ const Projects = () => (
           </WorkGridItem>
           <Center >
             <Tag>ML (Sentiment Analysis)</Tag>
-            <Tag>Python</Tag>
+            <Tag>Fullstack</Tag>
           </Center>
         </Section>
       </SimpleGrid>
