@@ -75,16 +75,6 @@ const Navbar = props => {
           <LinkItem href="/projects" path={path}>
             Projects
           </LinkItem>
-          <LinkItem 
-            href="/skills"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}>
-            <BsVectorPen size={23}/>
-            Skills
-          </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">

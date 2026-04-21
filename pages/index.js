@@ -22,6 +22,7 @@ import thumbChess from '../public/images/projects/chess-ai.png'
 import thumbMarket from '../public/images/projects/mmd.png'
 import Image from 'next/image'
 import VoxelLoader from '../components/voxel-loader'
+import Terminal from '../components/terminal'
 
 const LazyVoxelImg = dynamic(() => import('../components/voxel-img'), {
   ssr: false,
@@ -115,9 +116,9 @@ const Home = () => (
         </Paragraph>
       </Section>
 
-      <Section delay={0.3}>
+      <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-        Projects
+         Projects
         </Heading>
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
@@ -143,6 +144,18 @@ const Home = () => (
               All Projects
             </Button>
           </NextLink>
+        </Box>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Skills
+        </Heading>
+        <Box 
+          position="relative" 
+          zIndex={1}
+        >
+          <Terminal />
         </Box>
       </Section>
     </Container>
