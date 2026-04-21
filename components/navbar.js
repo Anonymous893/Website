@@ -16,8 +16,6 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import { BsVectorPen } from 'react-icons/bs'
-import { HiAcademicCap } from "react-icons/hi";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -94,12 +92,6 @@ const Navbar = props => {
                 </NextLink>
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
-                </NextLink>
-                <NextLink href="/skills" passHref>
-                  <MenuItem as={Link}>Skills</MenuItem>
-                </NextLink>
-                <NextLink href="/coursework" passHref>
-                  <MenuItem as={Link}>Coursework</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>

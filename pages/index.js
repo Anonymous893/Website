@@ -23,6 +23,7 @@ import thumbMarket from '../public/images/projects/mmd.png'
 import Image from 'next/image'
 import VoxelLoader from '../components/voxel-loader'
 import Terminal from '../components/terminal'
+import Typewriter from '../components/typewriter'
 
 const LazyVoxelImg = dynamic(() => import('../components/voxel-img'), {
   ssr: false,
@@ -45,7 +46,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        UMD CS | ECON | STAT
+        <Typewriter text="UMD CS | ECON | STAT" delay={150} />
       </Box>
 
       <Box display={{ md: 'flex' }}>
